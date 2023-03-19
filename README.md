@@ -21,7 +21,9 @@
 ```git clone git@github.com:Dron-71/api_final_yatube.git```
 
 
-2. Переходите в проект ```cd api_final_yatube```
+2. Переходите в проект
+
+```cd api_final_yatube```
 
 
 3. Cоздать и активировать виртуальное окружение: 
@@ -64,6 +66,8 @@
 ```Authorization: Bearer <токен>.```
 
 
-### *Документация для API Yatube*
+
+
+## Документация для API Yatube
 
 ```http://127.0.0.1:8000/redoc/```
