@@ -7,6 +7,7 @@ from rest_framework import viewsets, status, permissions, filters
 from rest_framework.response import Response
 from .serializers import (CommentSerializer, FollowSerializer,
                           GroupSerializer, PostSerializer)
+from rest_framework import mixins
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -41,7 +42,9 @@ class GroupViewSet(viewsets.ModelViewSet):
         return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 
-class FollowViewSet(viewsets.ModelViewSet):
+class FollowViewSet(mixins.CreateModelMixin,
+                    mixins.ListModelMixin,
+                    viewsets.GenericViewSet):
     serializer_class = FollowSerializer
     permission_classes = (permissions.IsAuthenticated,)
     filter_backends = (filters.SearchFilter,)

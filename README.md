@@ -18,39 +18,59 @@
 ## Установка
 1. Клонируйте репозиторий
 
-```git clone git@github.com:Dron-71/api_final_yatube.git```
+```bash 
+git clone git@github.com:Dron-71/api_final_yatube.git
+```
 
 
 2. Переходите в проект
 
-```cd api_final_yatube```
+```bash
+cd api_final_yatube
+```
 
 
 3. Cоздать и активировать виртуальное окружение: 
 
-```python3 -m venv venv```
+```bash
+python3 -m venv venv
+```
 
-```source venv/bin/activate```
+```bash
+source venv/bin/activate
+```
 
 
 4. Установить зависимости из файла requirements.txt: 
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
-```pip install django-filter```
+```bash
+pip install django-filter
+```
 
 
 5. Выполнить миграции 
 
-```python3 manage.py migrate```
+```bash
+python3 manage.py migrate
+```
 
 
-6. Перейти в директорию ```cd yatube_api```
+6. Перейти в директорию
+
+```bash
+cd yatube_api
+```
 
 
 7. Запустить проект
 
-```python3 manage.py runserver```
+```bash
+python3 manage.py runserver
+```
 
 
 8. Получить токен для доступа к API.
@@ -58,7 +78,13 @@
 
 Делаем POST-запрос на ```http://127.0.0.1:8000/api/v1/token/```
 
-передав поля username и password
+передав поля 
+```js
+{
+    "username": "admin", 
+    "password": "admin" 
+}  
+```
 
 
 9. Передавайте токен(access) в Hearders:
